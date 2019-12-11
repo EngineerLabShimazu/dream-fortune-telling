@@ -23,11 +23,36 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "夢占いへようこそ！" \
-                      "これからバリバリ開発してくださいね。" \
-                      "楽しみにしてます！いまは「こんにちは」というインテント" \
-                      "のみ対応しています。"
+        speech_text = "おはようございます。" \
+                      "私が夢を覚えてあげますね。" \
+                      "何の夢を見ましたか？"
         handler_input.response_builder.speak(speech_text).ask(speech_text)
+        return handler_input.response_builder.response
+
+
+class DreamContentHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        # type: (HandlerInput) -> bool
+        return is_request_type("DreamContent")(handler_input)
+
+    def handle(self, handler_input):
+        # type: (HandlerInput) -> Union[None, Response]
+        speech_text = "そっかぁ。今はどんな感じ？"
+        handler_input.response_builder.speak(speech_text).ask(speech_text)
+        return handler_input.response_builder.response
+
+
+class UserStateHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        # type: (HandlerInput) -> bool
+        return is_request_type('UserState')(handler_input)
+
+    def handle(self, handler_input):
+        # type: (HandlerInput) -> Union[None, Response]
+        speech_text = "面白いですね！" \
+                      "深層心理では、欲求が高まっているみたいですね！"
+        handler_input.response_builder.speak(speech_text).ask(
+            speech_text).set_should_end_session(True)
         return handler_input.response_builder.response
 
 
