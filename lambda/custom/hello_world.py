@@ -26,7 +26,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
         speech_text = "夢占いへようこそ！" \
                       "これからバリバリ開発してくださいね。" \
                       "楽しみにしてます！いまは「こんにちは」というインテント" \
-                      "のみ対応しいます。"
+                      "のみ対応しています。"
         handler_input.response_builder.speak(speech_text).ask(speech_text)
         return handler_input.response_builder.response
 
