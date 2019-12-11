@@ -2,14 +2,12 @@
   "manifest": {
     "publishingInformation": {
       "locales": {
-        "en-US": {
+        "ja-JP": {
           "summary": "A basic skill made from Alexa Skills Kit template",
           "examplePhrases": [
-            "Alexa open hello python",
-            "Alexa tell hello python hello",
-            "Alexa ask hello python say hello"
+            "アレクサ、夢占いを開いて"
           ],
-          "name": "hello python",
+          "name": "夢占い",
           "description": "A basic skill made from Alexa Skills Kit template"
         }
       },
