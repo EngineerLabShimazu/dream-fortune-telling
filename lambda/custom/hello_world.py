@@ -23,7 +23,10 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "Welcome, you can say Hello or Help. Which would you like to try?"
+        speech_text = "夢占いへようこそ！" \
+                      "これからバリバリ開発してくださいね。" \
+                      "楽しみにしてます！いまは「こんにちは」というインテント" \
+                      "のみ対応しいます。"
         handler_input.response_builder.speak(speech_text).ask(speech_text)
         return handler_input.response_builder.response
 

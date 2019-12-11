@@ -1,0 +1,29 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "夢占い",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "こんにちは"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
