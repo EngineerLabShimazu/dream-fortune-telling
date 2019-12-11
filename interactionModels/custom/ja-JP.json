@@ -16,10 +16,24 @@
                     "samples": []
                 },
                 {
-                    "name": "HelloWorldIntent",
+                    "name": "DreamContent",
                     "slots": [],
                     "samples": [
-                        "こんにちは"
+                        "おなかいっぱい魚の竜田揚げを食べる夢をみた",
+                        "夢をみた",
+                        "食べる夢をみた",
+                        "魚の竜田揚げを食べる夢をみた"
+                    ]
+                },
+                {
+                    "name": "UserState",
+                    "slots": [],
+                    "samples": [
+                        "HPがMAX回復したよ",
+                        "回復したよ",
+                        "MAX回復したよ",
+                        "マックス回復したよ",
+                        "体力がマックス回復したよ"
                     ]
                 }
             ],
